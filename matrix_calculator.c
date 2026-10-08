@@ -60,8 +60,8 @@ void mult_maxtrix(int row_M, int row_N,int col_M, int col_N,  double M[MAXSIZE][
         for (int k = 0; k < col_M; k++){
             for (int i = 0; i < row_M; i++){
                 for (int j = 0; j < col_N; j++){
-                    S[i+1][j+1] = M[i+1][k+1]*N[k+1][j+1];
-                    V[i+1][j+1] = V[i+1][j+1] + S[i+1][j+1];
+                    S[i][j] = M[i][k]*N[k][j];
+                    V[i][j] = V[i][j] + S[i][j];
                 }
             }
         }
@@ -90,7 +90,7 @@ int main(void){
     printf("Add two matrix : 5 \n");
     printf("Transpose a matrix A : 6 \n");
     printf("Transpose a matrix B : 7 \n");
-    printf("Multiple two matrices (AB) : \n");
+    printf("Multiple two matrices (AB) : 8 \n");
     printf("Exit : 0 \n");
     printf("Select an option.\n");
     
